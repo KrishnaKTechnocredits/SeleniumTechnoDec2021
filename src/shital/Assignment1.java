@@ -74,7 +74,7 @@ public class Assignment1 {
 		driver.findElement(By.xpath("//*[text()='Javascript Prompt']")).click();
 		Alert alert =driver.switchTo().alert();
 		alert.sendKeys("Shital");
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		alert.accept();
 		String OriginalMsg=driver.findElement(By.xpath("//p[@class='help-block'][@id='pgraphdemo']")).getText();
 		System.out.println("Message showing as :"+OriginalMsg);
