@@ -11,7 +11,7 @@ public class Illegal_Exceptions {
 		System.setProperty("webdriver.chrome.driver", "./drivers/a/chromedriver_98Version.exe");
 		WebDriver driver =new ChromeDriver();
 		driver.get("file:///C:/Users/sagarparab/AppData/Local/Temp/Temp1_htmlForms.zip/Harsh_Enable_&_Disable.html");
-		
+		driver.close();
 	}
 
 }
