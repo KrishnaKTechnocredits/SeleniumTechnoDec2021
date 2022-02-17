@@ -16,6 +16,8 @@ public class NoSuchElement {
 		driver.findElement(By.linkText("Basic Elements")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//button[contains(@id,'javascript1Alert')]")).click();
+		driver.close();
+		
 
 
 	}

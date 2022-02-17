@@ -16,6 +16,7 @@ public class NoWindow {
 		System.out.println("Browser launched");
 		driver.findElement(By.linkText("Basic Elements")).click();
 		driver.switchTo().window("123");
+		driver.close();
 	}
 
 }

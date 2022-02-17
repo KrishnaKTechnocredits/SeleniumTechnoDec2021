@@ -13,6 +13,7 @@ public class ElementNotInteractable {
 		System.out.println("Maximized browser");
 		driver.get("file:///C:/Users/sagarparab/AppData/Local/Temp/Temp1_htmlForms.zip/Harsh_Enable_&_Disable.html");
 		driver.findElement(By.xpath("//input[@id='myText']")).sendKeys("123");
+		driver.close();
 	}
 
 }

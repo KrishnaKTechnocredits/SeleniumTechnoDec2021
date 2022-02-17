@@ -12,6 +12,7 @@ public class NoAlert {
 		System.out.println("Maximized browser");
 		driver.get("file:///C:/Users/sagarparab/AppData/Local/Temp/Temp1_htmlForms.zip/Harsh_Enable_&_Disable.html");
 		driver.switchTo().window("");
+		driver.close();
 	}
 
 }

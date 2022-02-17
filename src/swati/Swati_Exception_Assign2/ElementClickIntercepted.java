@@ -30,6 +30,7 @@ public class ElementClickIntercepted {
 		String str = alert.getText();
 		System.out.println(str);
 		alert.accept();
+		driver.close();
 	}
 
 }

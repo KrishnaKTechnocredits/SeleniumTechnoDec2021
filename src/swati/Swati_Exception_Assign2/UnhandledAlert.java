@@ -18,6 +18,7 @@ public class UnhandledAlert {
 		
 		driver.findElement(By.xpath("//button[contains(@id,'javascriptAlert')]")).click();
 		driver.findElement(By.xpath("//button[contains(@id,'javascriptConfirmBox')]")).click();
+		driver.close();
 	}
 	
 

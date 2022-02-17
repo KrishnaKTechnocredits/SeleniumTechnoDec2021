@@ -17,7 +17,7 @@ public class NoSuchSession {
 		Thread.sleep(3000);
 		driver.close();
 		driver.findElement(By.xpath("//button[contains(@id,'javascriptAlert')]")).click();
-	
+		driver.close();
 
 	}
 
