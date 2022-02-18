@@ -35,7 +35,7 @@ public class A4_SelectWithOutSelectTag {
 		List<WebElement> list = driver.findElements(By.xpath("//ul[@id='products_listbox']/li/span"));
 		for (int index = 0; index < list.size(); index++) {
 			String productName = list.get(index).getText().replaceAll(" ", "");
-			if(productName.length()==13) {
+			if (productName.length() == 13) {
 				System.out.println(productName);
 			}
 		}
