@@ -1,4 +1,4 @@
-package swati;
+package swati.Swati_Assignment3;
 
 import java.util.List;
 
@@ -12,9 +12,7 @@ public class Select_Assign3 {
 
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver_98Version.exe");
-
 		WebDriver driver = new ChromeDriver();
-
 		driver.get("https://twitter.com/i/flow/signup");
 		Thread.sleep(3000);
 		WebElement month = driver.findElement(By.xpath("//select[@id=\"SELECTOR_1\"]"));
@@ -26,13 +24,12 @@ public class Select_Assign3 {
 		System.out.println(ls.size());
 		WebElement day = driver.findElement(By.xpath("//select[@id=\"SELECTOR_2\"]"));
 		Thread.sleep(3000);
-		select=new Select(day);
+		select = new Select(day);
 		select.selectByValue("2");
-		WebElement year=driver.findElement(By.xpath("//select[@id=\"SELECTOR_3\"]"));
+		WebElement year = driver.findElement(By.xpath("//select[@id=\"SELECTOR_3\"]"));
 		Thread.sleep(3000);
-		select=new Select(year);
+		select = new Select(year);
 		select.selectByVisibleText("1973");
-		select.deselectByValue("1973");
 
 	}
 
