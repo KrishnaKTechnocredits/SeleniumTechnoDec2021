@@ -14,5 +14,7 @@ public class LaunchBrowser {
 		System.out.println("Browser launched");
 		driver.close();
 		System.out.println("Browser Closed");
+
 	}
+
 }
