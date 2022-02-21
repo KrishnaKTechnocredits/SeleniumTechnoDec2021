@@ -1,11 +1,11 @@
-package swati;
+package swati.Swati_Exception_Assign2;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class LaunchBrowser {
+public class ElementClickIntercepted {
 
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver_98Version.exe");
@@ -30,29 +30,7 @@ public class LaunchBrowser {
 		String str = alert.getText();
 		System.out.println(str);
 		alert.accept();
-
-		// Javascript Confirmation Alert on Ok
-		driver.findElement(By.xpath("//button[contains(@id,'javascriptConfirmBox')]")).click();
-		alert = driver.switchTo().alert();
-		alert.accept();
-		str = driver.findElement(By.xpath("//p[contains(text(),\"You\")]")).getText();
-		System.out.println(str);
-
-		// Javascript Confirmation on Cancel
-		driver.findElement(By.xpath("//button[contains(@id,'javascriptConfirmBox')]")).click();
-		alert = driver.switchTo().alert();
-		alert.dismiss();
-		str = driver.findElement(By.xpath("//p[contains(text(),\"You\")]")).getText();
-		System.out.println(str);
-
-		// Javascript Prompt on Cancel
-		driver.findElement(By.xpath("//button[contains(@id,'javascriptPromp')]")).click();
-		alert = driver.switchTo().alert();
-		alert.sendKeys("Swati");
-		alert.accept();
-		str = driver.findElement(By.xpath("//p[contains(text(),\"Hello\")]")).getText();
-		System.out.println(str);
 		driver.close();
-		System.out.println("Browser Closed");
 	}
+
 }
