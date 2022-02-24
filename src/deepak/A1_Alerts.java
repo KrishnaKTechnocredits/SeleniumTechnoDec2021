@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class A1_Alerts {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver_98Version.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://automationbykrishna.com/");
