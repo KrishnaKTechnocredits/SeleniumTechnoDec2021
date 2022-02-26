@@ -63,7 +63,7 @@ public class A7_WebTableMaps {
 				maxCount = hs.get(managerId);
 			}
 		}
-		return managerWithMaxEmployees + "--->" + maxCount;
+		return managerWithMaxEmployees + "-->" + maxCount;
 	}
 
 	List<String> getEmployeeIDAndEmployeeNameDuplicates(WebDriver driver) {
