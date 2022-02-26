@@ -21,16 +21,16 @@ public class A6_P4_and_P5_WebTable {
 	Set<String> getUniqueManagerIds(WebDriver driver){
 		List<WebElement> ls = driver.findElements(By.xpath("//div[@id='empmanager']//table/tbody/tr/td[4]"));
 		Set<String> hs= new HashSet<String>();
-		for(WebElement ele:ls)
-			hs.add(ele.getText());
+		for(WebElement element:ls)
+			hs.add(element.getText());
 		return hs;
 	}
 	
 	Set<String> getUniqueDepartmentIds(WebDriver driver){
 		List<WebElement> ls = driver.findElements(By.xpath("//div[@id='empmanager']//table/tbody/tr/td[5]"));
 		Set<String> hs= new HashSet<String>();
-		for(WebElement ele:ls)
-			hs.add(ele.getText());
+		for(WebElement element:ls)
+			hs.add(element.getText());
 		return hs;
 	}
 	
