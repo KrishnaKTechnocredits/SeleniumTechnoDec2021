@@ -19,17 +19,15 @@ public class Assign11_text {
 		int count = 0;
 
 		while (scan.hasNext()) {
-
 			line = scan.next();
 			a.add(line);
-
 		}
-		for(String arr:a) {
+		for (String arr : a) {
 			if (arr.contains("technocredits")) {
 				count++;
 			}
 		}
-		
+
 		System.out.println(count);
 		scan.close();
 	}

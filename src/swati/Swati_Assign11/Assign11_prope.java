@@ -23,8 +23,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Assign11_prope {
 
 	public static void main(String[] args) throws IOException {
-		WebDriver driver=swati.InitializeDriver.initialize("http://automationbykrishna.com/");
-		
+		WebDriver driver = swati.InitializeDriver.initialize("http://automationbykrishna.com/");
+
 		File file = new File(
 				"C:\\Users\\sagarparab\\Desktop\\techno git\\SeleniumTechnoDec2021\\src\\swati\\config.properties");
 		FileInputStream fs = new FileInputStream(file);
