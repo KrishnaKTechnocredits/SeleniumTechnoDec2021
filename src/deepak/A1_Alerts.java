@@ -33,18 +33,28 @@ public class A1_Alerts {
 		System.out.println("=======================================================================================");
 
 		System.out.println("2. Java Script Confirmation Alert");
+		String alertText = "Are you are doing your homework regularly, Press Okay else Cancel!!";
 		driver.findElement(By.xpath("//button[@id = 'javascriptConfirmBox']")).click();
 		alert = driver.switchTo().alert();
-		System.out.println("Text on the alert is: " + alert.getText());
+		if (alertText.equals(alert.getText())) {
+			System.out.println("Text on the alert is same as expected text: " + alert.getText());
+		}
 		alert.accept();
+		String expectedStrOK = "You pressed OK!";
 		String strOK = driver.findElement(By.xpath("//p[@id = 'pgraphdemo']")).getText();
-		System.out.println("Text on click of OK button: " + strOK);
+		if (strOK.equals(expectedStrOK)) {
+			System.out.println("Text on click of OK button is as expected: " + strOK);
+		}
 		Thread.sleep(2000);
+
 		driver.findElement(By.xpath("//button[@id = 'javascriptConfirmBox']")).click();
 		alert = driver.switchTo().alert();
 		alert.dismiss();
+		String expectedStrCANCEL = "You pressed Cancel!";
 		String strCANCEL = driver.findElement(By.xpath("//p[@id = 'pgraphdemo']")).getText();
-		System.out.println("Text on click of Cancel button: " + strCANCEL);
+		if (strCANCEL.equals(expectedStrCANCEL)) {
+			System.out.println("Text on click of Cancel button is as expected: " + strCANCEL);
+		}
 		System.out.println("=======================================================================================");
 
 		System.out.println("3. Java Script Prompt");
