@@ -70,15 +70,19 @@ public class A5_P1_to_P5_WebTableOps {
 		
 		System.out.println("############## Program 1 ###############");
 		System.out.println("Total Number of Employees are: " + a5p1.countNoOfRowsInTable(driver));
+		System.out.println("");
 		
 		System.out.println("############## Program 2 ###############");
 		System.out.println("Number of Employees joined after Dhara is: " + a5p1.countFollowingNodes(driver));
+		System.out.println("");
 		
 		System.out.println("############## Program 3 ###############");
 		System.out.println("Name of Employee whose username ppatro is:" + a5p1.getNameFromTable(driver));
+		System.out.println("");
 		
 		System.out.println("############## Program 4 ###############");
 		System.out.println("Column Headers are: " + a5p1.printHeader(driver));
+		System.out.println("");
 		
 		System.out.println("############## Program 5 ###############");
 		System.out.println("Table1 data is : " + a5p1.printDataOfWebTable(driver));
