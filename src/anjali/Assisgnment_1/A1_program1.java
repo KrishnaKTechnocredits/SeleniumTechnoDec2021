@@ -1,4 +1,4 @@
-package anjali.A1;
+package anjali.Assisgnment_1;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;

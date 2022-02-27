@@ -1,4 +1,4 @@
-package anjali.A3;
+package anjali.Assignment_3;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

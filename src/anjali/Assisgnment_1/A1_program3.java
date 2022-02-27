@@ -5,7 +5,7 @@
     4. Set text “Your Name” and verify that your name should get displayed on UI in the below format
         “Hello harsh! How are you today?
  */
-package anjali.A1;
+package anjali.Assisgnment_1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

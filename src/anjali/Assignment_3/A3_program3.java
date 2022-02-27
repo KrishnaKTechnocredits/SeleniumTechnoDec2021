@@ -3,7 +3,7 @@
      1. Visit "https://demo.guru99.com/test/newtours/register.php"
      2. Pritn the only those country name which has length more than 10
  */
-package anjali.A3;
+package anjali.Assignment_3;
 
 import java.util.List;
 

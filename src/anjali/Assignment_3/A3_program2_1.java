@@ -4,7 +4,7 @@
     2. Navigate to "Basic element tab"
     3. Perform multi drop down methods(deselect by index/value/text, deselectAll)
 */
-package anjali.A3;
+package anjali.Assignment_3;
 
 import java.util.List;
 
