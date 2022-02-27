@@ -1,10 +1,9 @@
-package sagarShrikhande;
+package archana;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,9 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class A7_WebTableMaps {
-
-	Map<String, Integer> getDeptAndEmployeeCount(WebDriver driver) {
+public class Assignment7 {
+	Map<String, Integer> getCountDeptEmp(WebDriver driver) {
 		Map<String, Integer> hs = new HashMap<String, Integer>();
 		List<WebElement> ls = driver.findElements(By.xpath("//div[@id='empmanager']//table/tbody/tr/td[5]"));
 		for (int i = 1; i <= ls.size(); i++) {
@@ -28,7 +26,7 @@ public class A7_WebTableMaps {
 		return hs;
 	}
 
-	Map<String, Integer> getManagerIDAndEmployeeCount(WebDriver driver) {
+	Map<String, Integer> getCountOfManagerEmp(WebDriver driver) {
 		Map<String, Integer> hs = new HashMap<String, Integer>();
 		List<WebElement> ls = driver.findElements(By.xpath("//div[@id='empmanager']//table/tbody/tr/td[4]"));
 		for (int i = 1; i <= ls.size(); i++) {
@@ -42,7 +40,7 @@ public class A7_WebTableMaps {
 		return hs;
 	}
 
-	String getManagerIDWithMaxEmployeeCount(WebDriver driver) {
+	String getCountOfManagerMaxEmp(WebDriver driver) {
 		Map<String, Integer> hs = new HashMap<String, Integer>();
 		List<WebElement> ls = driver.findElements(By.xpath("//div[@id='empmanager']//table/tbody/tr/td[4]"));
 		for (int i = 1; i <= ls.size(); i++) {
@@ -63,10 +61,11 @@ public class A7_WebTableMaps {
 				maxCount = hs.get(managerId);
 			}
 		}
-		return managerWithMaxEmployees + "-->" + maxCount;
+		return managerWithMaxEmployees + "--->" + maxCount;
+
 	}
 
-	List<String> getEmployeeIDAndEmployeeNameDuplicates(WebDriver driver) {
+	List<String> getDuplicatesEmpIDName(WebDriver driver) {
 		Map<String, String> hs = new HashMap<String, String>();
 		List<WebElement> ls = driver.findElements(By.xpath("//div[@id='empmanager']//table/tbody/tr/td[2]"));
 		List<String> dupEmpList = new ArrayList<String>();
@@ -77,7 +76,6 @@ public class A7_WebTableMaps {
 					.getText();
 			if (hs.containsKey(empId))
 				dupEmpList.add(empId + "-->" + hs.get(empId));
-
 			else
 				hs.put(empId, empName);
 		}
@@ -86,30 +84,23 @@ public class A7_WebTableMaps {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver",
-				"I:\\Learning\\Eclipse\\Basic Selenium\\driver\\chromedriver.exe");
+				"C:\\Users\\Archana\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		String url = "http://automationbykrishna.com/";
-		A7_WebTableMaps a7 = new A7_WebTableMaps();
+		Assignment7 ass7 = new Assignment7();
 		driver.get(url);
 		driver.manage().window().maximize();
 		driver.findElement(By.id("demotable")).click();
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='empmanager']")));
-
-		System.out.println("############## Program 1 ###############");
-		System.out.println("DeptId and count is:aa " + a7.getDeptAndEmployeeCount(driver));
-
-		System.out.println("############## Program 2 ###############");
-		System.out.println("Unique Department IDs from table2 " + a7.getManagerIDAndEmployeeCount(driver));
-
-		System.out.println("############## Program 3 ###############");
-		System.out.println("Manager ID having max employees " + a7.getManagerIDWithMaxEmployeeCount(driver));
-
-		System.out.println("############## Program 4 ###############");
-		System.out
-				.println("List of employees with Duplicate entry" + a7.getEmployeeIDAndEmployeeNameDuplicates(driver));
-
+		System.out.println("-------------------1---------------------");
+		System.out.println("DeptId and count is:aa " + ass7.getCountDeptEmp(driver));
+		System.out.println("-------------------2---------------------");
+		System.out.println("Unique Department IDs from table2 " + ass7.getCountOfManagerEmp(driver));
+		System.out.println("-------------------3---------------------");
+		System.out.println("Manager ID having max employees " + ass7.getCountOfManagerMaxEmp(driver));
+		System.out.println("-------------------4---------------------");
+		System.out.println("List of employees with Duplicate entry" + ass7.getDuplicatesEmpIDName(driver));
 		driver.quit();
 	}
-
 }

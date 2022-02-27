@@ -49,12 +49,12 @@ public class A6_P1_to_3_WebTable {
 	
 	List<String> getAllTheEmployeeUserNameWithLengthCondition(WebDriver driver){
 		List<WebElement> ls = driver.findElements(By.xpath("//table[@id ='table1']/tbody/tr/td[4]"));
-		List<String> finalList= new ArrayList<String>();
+		List<String> finalList1= new ArrayList<String>();
 		for(WebElement ele:ls) {
 			if(ele.getText().length() >6)
-				finalList.add(ele.getText());
+				finalList1.add(ele.getText());
 		}
-		return finalList;
+		return finalList1;
 	}
 	
 	public static void main(String[] args) {
