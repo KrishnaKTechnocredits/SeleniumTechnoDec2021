@@ -1,17 +1,18 @@
 package technocredits.multiwindow;
 
 import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 
 import technocredits.base.PredefinedActions;
 
 public class MultiWindowhandles {
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public void multiWindowHandle() throws InterruptedException {
 		WebDriver driver = PredefinedActions.openBrowser("https://www.flipkart.com/");
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']")).click();
@@ -26,11 +27,9 @@ public class MultiWindowhandles {
 				"//*[@id=\"container\"]/div/div[3]/div[1]/div[2]/div[2]/div/div/div/a/div[1]/div[1]/div/div/img"))
 				.click();
 
-		
 		String mainWindow = driver.getWindowHandle(); // flipkart.com
 		Set<String> multipleWindow = driver.getWindowHandles();// total tab we open from automation
 
-		
 		System.out.println("Main wind: " + mainWindow);
 //		for(String cWin : multipleWindow) {
 //			
