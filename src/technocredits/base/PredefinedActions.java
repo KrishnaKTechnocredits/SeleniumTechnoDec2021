@@ -16,6 +16,16 @@ public class PredefinedActions {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(url);
+//		WebDriver driver = new ChromeDriver();// child
+//		TakesScreenshot ts = (TakesScreenshot) driver;// parent
+
+		// Inheritance & polymorphism
+//		ChromeDriver driver = new ChromeDriver();// child
+//		TakesScreenshot ts =  driver;// parent
+
+//		RemoteWebDriver driver = new ChromeDriver();// child
+//		TakesScreenshot ts = driver;// parent
+
 		return driver;
 	}
 
@@ -24,7 +34,7 @@ public class PredefinedActions {
 		WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 		return ele;
 	}
-	
+
 	public static WebElement waitForElementToBeClick(By by) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(by));
